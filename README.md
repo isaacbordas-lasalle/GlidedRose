@@ -9,6 +9,7 @@ A primera vista llama la atención la gran cantidad de condicionales 'if' en el 
 
 # Justifica por qué
 Las siguientes líneas se hacen difíciles de leer y comprender:
+```
     if ($item->name != 'Aged Brie' and $item->name != 'Backstage passes to a TAFKAL80ETC concert') {
         if ($item->quality > 0) {
             if ($item->name != 'Sulfuras, Hand of Ragnaros') {
@@ -17,4 +18,8 @@ Las siguientes líneas se hacen difíciles de leer y comprender:
         }
     } else {
     ....
+```
 
+# ¿Qué harías para mejorarlo?
+Aplicaría el refactoring 'Replace Nested Conditional with Guard Clauses' para eliminar la identación excesiva y mejorar así la legibilidad.
+Una vez comprobado el correcto funcionamiento se podría utilizar la técnica 'Consolidate Conditional Expression' para agrupar condicionales.
