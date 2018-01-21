@@ -4,18 +4,18 @@ namespace GlidedRose;
 
 class Item {
 
-    public $name;
+    public $itemName;
     public $sell_in;
-    public $quality;
+    public $ItemQuality;
 
-    function __construct($name, $sell_in, $quality) {
-        $this->name = $name;
+    function __construct($itemName, $sell_in, $ItemQuality) {
+        $this->itemName = $itemName;
         $this->sell_in = $sell_in;
-        $this->quality = $quality;
+        $this->ItemQuality = $ItemQuality;
     }
 
     public function __toString() {
-        return "{$this->name}, {$this->sell_in}, {$this->quality}";
+        return "{$this->itemName}, {$this->sell_in}, {$this->ItemQuality}";
     }
 
 }
