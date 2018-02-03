@@ -28,7 +28,7 @@ $app = new GildedRose($items);
 $days = 2;
 
 if (!empty($argv) && count($argv) > 1) {
-    $days = (int) $argv[1];
+    $days = (int)$argv[1];
 }
 
 for ($i = 0; $i < $days; $i++) {
