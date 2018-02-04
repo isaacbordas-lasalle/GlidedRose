@@ -1,5 +1,5 @@
 {
     "autoload": {
-        "psr-4": {"GlidedRose\\": "src/"}
+        "psr-4": {"GildedRose\\": "src/GildedRose"}
     }
 }

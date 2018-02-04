@@ -3,12 +3,17 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+function printLineBreak()
+{
+    return (PHP_SAPI === 'cli' ? PHP_EOL : '<br />');
+}
+
 require_once 'vendor/autoload.php';
 
-use GlidedRose\GildedRose;
-use GlidedRose\Item;
+use \GildedRose\GildedRose;
+use \GildedRose\Item;
 
-echo "OMGHAI!\n";
+echo "OMGHAI!" . printLineBreak();
 
 $items = array(
     new Item('+5 Dexterity Vest', 10, 20),
@@ -32,11 +37,11 @@ if (!empty($argv) && count($argv) > 1) {
 }
 
 for ($i = 0; $i < $days; $i++) {
-    echo("-------- day $i --------\n");
-    echo("name, sellIn, quality\n");
+    echo("-------- day $i --------") . printLineBreak();
+    echo("name, sellIn, quality") . printLineBreak();
     foreach ($items as $item) {
-        echo $item . PHP_EOL;
+        echo $item . printLineBreak();
     }
-    echo PHP_EOL;
-    $app->update_quality();
+    echo printLineBreak();
+    $app->UpdateQuality();
 }
