@@ -43,5 +43,5 @@ for ($i = 0; $i < $days; $i++) {
         echo $item . printLineBreak();
     }
     echo printLineBreak();
-    $app->UpdateQuality();
+    $app->updateQuality();
 }

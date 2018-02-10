@@ -6,17 +6,17 @@ namespace GildedRose\Items;
 class AgedBrieItem implements ItemInterface
 {
 
-    public function UpdateItemQuality($item): void
+    public function updateItemQuality($item): void
     {
 
-        if ($item->ItemQuality < 50) {
-            $item->ItemQuality = $item->ItemQuality + ItemInterface::ITEM_QUALITY_INTERVAL;
+        if ($item->quality < 50) {
+            $item->quality = $item->quality + ItemInterface::ITEM_QUALITY_INTERVAL;
         }
 
-        --$item->sell_in;
+        $item->sell_in = $item->sell_in - 1;
 
-        if ($item->sell_in < 0 && $item->ItemQuality < 50) {
-            $item->ItemQuality = $item->ItemQuality + ItemInterface::ITEM_QUALITY_INTERVAL;
+        if ($item->sell_in < 0 && $item->quality < 50) {
+            $item->quality = $item->quality + ItemInterface::ITEM_QUALITY_INTERVAL;
         }
 
         return;

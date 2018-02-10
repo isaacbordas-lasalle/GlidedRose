@@ -6,14 +6,14 @@ namespace GildedRose\Items;
 class ConjuredItems implements ItemInterface
 {
 
-    public function UpdateItemQuality($item): void
+    public function updateItemQuality($item): void
     {
 
-        if ($item->ItemQuality > 0) {
-            $item->ItemQuality = $item->ItemQuality - ItemInterface::CONJURED_ITEM_QUALITY_INTERVAL;
+        if ($item->quality > 0) {
+            $item->quality = $item->quality - ItemInterface::CONJURED_ITEM_QUALITY_INTERVAL;
         }
 
-        --$item->sell_in;
+        $item->sell_in = $item->sell_in - 1;
 
         return;
 

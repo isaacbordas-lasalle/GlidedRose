@@ -6,7 +6,7 @@ namespace GildedRose\Items;
 class SulfurasItem implements ItemInterface
 {
 
-    public function UpdateItemQuality($item): void
+    public function updateItemQuality($item): void
     {
 
         return;

@@ -5,20 +5,20 @@ namespace GildedRose;
 class Item
 {
 
-    public $itemName;
+    public $name;
     public $sell_in;
-    public $ItemQuality;
+    public $quality;
 
-    function __construct($itemName, $sell_in, $ItemQuality)
+    function __construct($name, $sell_in, $quality)
     {
-        $this->itemName = $itemName;
+        $this->name = $name;
         $this->sell_in = $sell_in;
-        $this->ItemQuality = $ItemQuality;
+        $this->quality = $quality;
     }
 
     public function __toString()
     {
-        return "{$this->itemName}, {$this->sell_in}, {$this->ItemQuality}";
+        return "{$this->name}, {$this->sell_in}, {$this->quality}";
     }
 
 }
