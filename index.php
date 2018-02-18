@@ -37,8 +37,8 @@ if (!empty($argv) && count($argv) > 1) {
 }
 
 for ($i = 0; $i < $days; $i++) {
-    echo("-------- day $i --------") . printLineBreak();
-    echo("name, sellIn, quality") . printLineBreak();
+    echo ("-------- day $i --------") . printLineBreak();
+    echo ("name, sellIn, quality") . printLineBreak();
     foreach ($items as $item) {
         echo $item . printLineBreak();
     }

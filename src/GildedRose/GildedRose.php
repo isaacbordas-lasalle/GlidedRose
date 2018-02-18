@@ -18,28 +18,28 @@ class GildedRose
 
             switch ($item->name) {
                 case 'Aged Brie':
-                    $agedbrie = new Items\AgedBrieItem;
-                    $agedbrie->updateItemQuality($item);
+                    $agedbrie = new Item\AgedBrieItem($item);
+                    $agedbrie->updateItemQuality();
                     break;
                 case 'Backstage passes to a TAFKAL80ETC concert':
-                    $backstage = new Items\BackstageItem;
-                    $backstage->updateItemQuality($item);
+                    $backstage = new Item\BackstageItem($item);
+                    $backstage->updateItemQuality();
                     break;
                 case 'Elixir of the Mongoose':
-                    $mongoose = new Items\ElixirMongooseItem;
-                    $mongoose->updateItemQuality($item);
+                    $mongoose = new Item\ElixirMongooseItem($item);
+                    $mongoose->updateItemQuality();
                     break;
                 case '+5 Dexterity Vest':
-                    $dexterity = new Items\DexterityVestItem;
-                    $dexterity->updateItemQuality($item);
+                    $dexterity = new Item\DexterityVestItem($item);
+                    $dexterity->updateItemQuality();
                     break;
                 case 'Sulfuras, Hand of Ragnaros':
-                    $sulfuras = new Items\SulfurasItem;
-                    $sulfuras->updateItemQuality($item);
+                    $sulfuras = new Item\SulfurasItem($item);
+                    $sulfuras->updateItemQuality();
                     break;
                 case (preg_match('/Conjured.*/', $item->name) ? true : false):
-                    $sulfuras = new Items\ConjuredItems;
-                    $sulfuras->updateItemQuality($item);
+                    $sulfuras = new Item\ConjuredItem($item);
+                    $sulfuras->updateItemQuality();
                     break;
             }
 

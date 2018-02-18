@@ -1,6 +1,6 @@
 <?php
 
-namespace GildedRose\Items;
+namespace GildedRose\Item;
 
 
 interface ItemInterface
@@ -8,7 +8,8 @@ interface ItemInterface
 
     const ITEM_QUALITY_INTERVAL = 1;
     const CONJURED_ITEM_QUALITY_INTERVAL = 2;
+    const ITEM_QUALITY_LIMIT = 50;
 
-    public function updateItemQuality($item): void;
+    public function updateItemQuality(): void;
 
 }
